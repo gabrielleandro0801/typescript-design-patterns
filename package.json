@@ -1,0 +1,28 @@
+{
+	"name": "typescript-design-patterns",
+	"version": "1.0.0",
+	"description": "Repository to store Typescript studies, third part libraries, code snippets and other stuff",
+	"main": "index.js",
+	"scripts": {
+		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gabrielleandro0801/typescript-design-patterns.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/gabrielleandro0801/typescript-design-patterns/issues"
+	},
+	"homepage": "https://github.com/gabrielleandro0801/typescript-design-patterns#readme",
+	"dependencies": {
+		"ioredis": "^5.3.1",
+		"ts-node-dev": "^2.0.0",
+		"typescript": "^5.0.4"
+	},
+	"devDependencies": {
+		"@types/node": "^18.15.11"
+	}
+}
