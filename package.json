@@ -4,8 +4,9 @@
 	"description": "Repository to store Typescript studies, third part libraries, code snippets and other stuff",
 	"main": "index.js",
 	"scripts": {
-		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts",
-		"builder-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify builder/v1/index.ts"
+		"adapter-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify adapter/v1/index.ts",
+		"builder-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify builder/v1/index.ts",
+		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts"
 	},
 	"repository": {
 		"type": "git",
