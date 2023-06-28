@@ -1,5 +1,5 @@
 import nodemailer from "nodemailer";
-import { Mail } from "nodemailer/lib/mailer";
+import Mail from "nodemailer/lib/mailer";
 import { MessageProps } from "../message";
 import { IMailSender } from "./sender";
 
