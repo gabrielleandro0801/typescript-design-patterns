@@ -7,7 +7,8 @@
 		"adapter-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify adapter/v1/index.ts",
 		"builder-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify builder/v1/index.ts",
 		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts",
-		"strategy-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify strategy/v1/index.ts"
+		"strategy-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify strategy/v1/index.ts",
+		"factory-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify factory_method/v1/index.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -27,6 +28,7 @@
 		"typescript": "^5.0.4"
 	},
 	"devDependencies": {
-		"@types/node": "^18.15.11"
+		"@types/node": "^18.15.11",
+		"@types/nodemailer": "^6.4.8"
 	}
 }
