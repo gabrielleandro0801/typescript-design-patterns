@@ -26,6 +26,17 @@ async function main() {
     } catch (error) {
         console.error(error.message);
     }
+
+    /*
+    Target: É a classe alvo, que só possuirá uma única instância gerada.
+    Client: O cliente, que manipulará a instância.
+
+    Target: É a classe SingletonRedisClient, que apesar de ser chamada duas vezes, gerou apenas
+    uma instância.
+    Client: Este arquivo.
+
+    https://sbcode.net/typescript/singleton/#singleton-uml-diagram
+    */ 
 }
 
 (async () => {
