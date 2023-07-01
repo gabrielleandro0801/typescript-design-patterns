@@ -14,17 +14,19 @@ function main() {
     target.xPressed();
     target.yPressed();
 
-    // Target: O Alvo, define a interface do domínio específico que o cliente utiliza.
-    // Adapter: O Adaptador, adapta a classe original (Adaptee) para a interface da classe Target.
-    // Adaptee: A Classe que necessita ser adaptada.
-    // Client: O Cliente, colabora com a interface Target.
+    /*
+    Adaptee: A Classe que necessita ser adaptada.
+    Adapter: O Adaptador, adapta a classe original (Adaptee) para a interface da classe Target.
+    Target: O Alvo, define a interface do domínio específico que o cliente utiliza.
+    Client: O Cliente, colabora com a interface Target.
 
-    // Target = Joystick de Xbox.
-    // Adapter = Adaptador que iremos escrever.
-    // Adaptee = Sensor do Playstation.
-    // Cliente = Usuário que utiliza o Joystick de Xbox.
+    Adaptee: Sensor do Playstation.
+    Adapter: Adaptador de Playstation para Xbox.
+    Target: Joystick de Xbox.
+    Client: Usuário que utiliza o Joystick de Xbox (este arquivo).
 
-    // https://medium.com/devpira/adapters-em-typescript-entendendo-o-pattern-a538a44a2df7
+    https://medium.com/devpira/adapters-em-typescript-entendendo-o-pattern-a538a44a2df7
+    */
 }
 
 (() => {

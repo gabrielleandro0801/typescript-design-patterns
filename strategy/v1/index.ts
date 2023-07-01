@@ -22,6 +22,23 @@ async function main() {
         subject: "Trap message",
         body: "<h1>Sent from trap</h1>",
     });
+
+    /*
+    Interface Strategy: É a interface responsável por definir o método que as classes 
+    concretas devem implementar.
+    Concrete Class: São as classes concretas, que implementarão a Interface Strategy.
+    Context Class: É a classe de contexto, que manipulará a Interface Strategy e a
+    executará.
+    Client: Usuário que manipula os objetos.
+
+    Interface Strategy: É a interface IMailSender.
+    Concrete Class: São as classes FakeMailSenderImpl e TrapSenderImpl.
+    Context Class: É a classe MailSender.
+    Client: Este arquivo.
+
+    https://luby.com.br/desenvolvimento/software/design-pattern-strategy-com-typescript/
+    https://sbcode.net/typescript/strategy/#strategy-uml-diagram
+    */
 }
 
 (async () => {
