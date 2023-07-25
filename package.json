@@ -9,7 +9,8 @@
 		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts",
 		"strategy-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify strategy/v1/index.ts",
 		"factory-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify factory/v1/index.ts",
-		"command-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify command/v1/index.ts"
+		"command-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify command/v1/index.ts",
+		"mediator-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify mediator/v1/index.ts"
 	},
 	"repository": {
 		"type": "git",
