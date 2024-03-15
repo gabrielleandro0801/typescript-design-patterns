@@ -4,14 +4,18 @@
 	"description": "Repository to store Typescript Design Patterns",
 	"main": "index.js",
 	"scripts": {
-		"adapter-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify adapter/v1/index.ts",
-		"builder-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify builder/v1/index.ts",
-		"singleton-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify singleton/v1/index.ts",
-		"strategy-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify strategy/v1/index.ts",
-		"factory-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify factory/v1/index.ts",
-		"command-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify command/v1/index.ts",
-		"mediator-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify mediator/v1/index.ts",
-		"facade-v1": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify facade/v1/index.ts"
+		"lint:fix": "prettier --config .prettierrc 'src/**/*.ts' --write --check",
+		"execute": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify $1",
+		"adapter-v1": "npm run execute src/adapter/v1/index.ts",
+		"builder-v1": "npm run execute src/builder/v1/index.ts",
+		"command-v1": "npm run execute src/command/v1/index.ts",
+		"facade-v1": "npm run execute src/facade/v1/index.ts",
+		"factory-v1": "npm run execute src/factory/v1/index.ts",
+		"mediator-v1": "npm run execute src/mediator/v1/index.ts",
+		"result-v1": "npm run execute src/result/v1/index.ts",
+		"result-v2": "npm run execute src/result/v2/index.ts",
+		"singleton-v1": "npm run execute src/singleton/v1/index.ts",
+		"strategy-v1": "npm run execute src/strategy/v1/index.ts"
 	},
 	"repository": {
 		"type": "git",
@@ -27,11 +31,12 @@
 	"dependencies": {
 		"ioredis": "^5.3.1",
 		"nodemailer": "^6.9.1",
-		"ts-node-dev": "^2.0.0",
-		"typescript": "^5.0.4"
+		"ts-node-dev": "^2.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^18.15.11",
-		"@types/nodemailer": "^6.4.8"
+		"@types/nodemailer": "^6.4.8",
+		"prettier": "3.2.5",
+		"typescript": "^5.0.4"
 	}
 }
