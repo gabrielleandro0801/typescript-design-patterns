@@ -36,4 +36,15 @@ class Math {
             console.log(`Success: ${response.success}`);
         }
     }
+
+    /*
+    A função [divide] da class Math sempre retorna uma instância da classe Left ou Right.
+    Em caso de sucesso no processamento, é retornada uma instância da classe Right.
+    Em caso de falha no processamento, é retornada uma instância da classe Left.
+
+    O cliente sempre verifica se o retorno foi um sucesso ou falha para poder seguir com o processamento.
+    Essa verificação é feita através dos métodos [isLeft] e [isRight].
+
+    https://medium.com/@wgyxxbf/result-pattern-a01729f42f8c#:~:text=The%20%E2%80%9CResult%20Pattern%E2%80%9D%20is%20an,flow%20to%20run%20more%20smoothly.
+    */
 })();
