@@ -34,9 +34,9 @@
 		"ts-node-dev": "^2.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^18.15.11",
+		"@types/node": "^22.9.0",
 		"@types/nodemailer": "^6.4.8",
 		"prettier": "3.2.5",
-		"typescript": "^5.0.4"
+		"typescript": "5.8.3"
 	}
 }
