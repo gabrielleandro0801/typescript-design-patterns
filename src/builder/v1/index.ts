@@ -1,31 +1,31 @@
-import { Car } from "./domain/car";
-import { Director } from "./domain/director";
-import { JeepBuilder } from "./domain/builders/jeep-builder";
+import { BankAccountBuilder } from "./domain/builders/BankAccountBuilder";
+import { BankAccount, BankAccountType } from "./domain/entities/BankAccount";
 
+/**
+ * A classe BankAccount pode ser instanciada de diferentes formas.
+ * Com isso, através do Builder e seus métodos, a classe cliente instancia fornecendo
+ * apenas os valores necessários para a situação.
+ */
 function main() {
-    const director: Director = new Director();
+    console.log("Creating empty BankAccount");
+    const emptyBankAccount: BankAccount = new BankAccountBuilder().getBankAccount();
+    console.log(emptyBankAccount.toJson());
 
-    console.log("===== Creating a Jeep =====");
-    director.builder = new JeepBuilder();
-    const jeep: Car = director.getCar();
-    jeep.getSpecification();
+    console.log("Creating full BankAccount");
+    const fullBankAccount: BankAccount = new BankAccountBuilder()
+        .setType(BankAccountType.CHECKING)
+        .setAgency("0001")
+        .setNumber("12345")
+        .setBalance(10)
+        .getBankAccount();
+    console.log(fullBankAccount.toJson());
 
-    /*
-    Product: É a classe alvo, que será montada pelos métodos da Interface Builder.
-    Interface Builder: É a interface que contém os métodos que montarão a estrutura do Product.
-    Concrete Builder: São as classes que implementam
-    Director: É a classe que manipulará a implementação da classe Builder.
-    Client: Usuário que colabora com o Director.
-
-    Product: É a classe Car.
-    Interface Builder: É a interface Builder.
-    Concrete Builder: É a interface JeepBuilder.
-    Director: É a classe Director, que recebe o JeepBuilder e o manipula para a montagem do Car.
-    Client: Este arquivo.
-
-    https://sbcode.net/typescript/builder/#builder-uml-diagram
-    https://refactoring.guru/design-patterns/builder/typescript/example
-    */
+    console.log("Creating half BankAccount");
+    const halfBankAccount: BankAccount = new BankAccountBuilder()
+        .setType(BankAccountType.CHECKING)
+        .setNumber("12345")
+        .getBankAccount();
+    console.log(halfBankAccount.toJson());
 }
 
 (() => {
