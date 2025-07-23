@@ -23,6 +23,11 @@ The class owns a [getInstance] method and turns its constructor into private.
 
 Then, the clients will use this method to get the class instance.
 
+## Specification
+It is the pattern used to encapsulate, reuse and combine business rules and validations. It also reduces the usage of if/else throughout the code.
+
+The Specification classes own a method named **isSatistiedBy** which validates the given input.
+
 ## Running :computer:
 Run the **package.json** scripts.
 
