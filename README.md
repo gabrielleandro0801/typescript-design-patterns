@@ -1,6 +1,16 @@
 # Typescript Design Patterns
 Repository with examples of Design Patterns in Typescript
 
+## Adapter
+It is the pattern used to set contracts through interfaces.
+
+So, implementations of these interfaces remain encapsulated preventing coupling between modules.
+
+## Builder
+It is the pattern used to instantiate complex objects in different ways.
+
+The instantiation of the complex object remain encapsulated inside the Builder.
+
 ## Result
 It is the pattern used to avoid throwing **exceptions** in the code.
 
