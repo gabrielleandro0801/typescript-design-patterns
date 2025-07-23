@@ -15,7 +15,8 @@
 		"result-v1": "npm run execute src/result/v1/index.ts",
 		"result-v2": "npm run execute src/result/v2/index.ts",
 		"singleton-v1": "npm run execute src/singleton/v1/index.ts",
-		"strategy-v1": "npm run execute src/strategy/v1/index.ts"
+		"strategy-v1": "npm run execute src/strategy/v1/index.ts",
+		"specification-v1": "npm run execute src/specification/v1/index.ts"
 	},
 	"repository": {
 		"type": "git",
