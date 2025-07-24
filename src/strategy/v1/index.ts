@@ -1,46 +1,48 @@
-import { FakeMailSenderImpl } from "./infra/mail-sender/fake";
-import { IMailSender } from "./infra/mail-sender/sender";
-import { MailSender } from "./infra/mail-sender/strategy";
-import { TrapSenderImpl } from "./infra/mail-sender/trap";
+import { BankAccount, BankAccountType } from "../domain/BankAccount";
+import { IMonthlyFeeStrategy } from "../domain/IMonthlyFeeStrategy";
+import {
+    BankAccountMonthlyFeeStrategy,
+    CheckingAccountFeeStrategy,
+    PayrollAccountFeeStrategy,
+    SavingAccountFeeStrategy,
+} from "../domain/MonthlyFeeStrategy";
 
-async function main() {
-    const fakeMail: IMailSender = new FakeMailSenderImpl();
-    const trapMail: IMailSender = new TrapSenderImpl();
+/**
+ * Cada uma das instâncias de BankAccount possui um tipo diferente, acarretando em diferentes
+ * modos de cálculo de mensalidade.
+ *
+ * O modo será escolhido dentro do método [calculate] da [IMonthlyFeeStrategy].
+ */
+function main() {
+    const firstBankAccount: BankAccount = new BankAccount();
+    firstBankAccount.type = BankAccountType.CHECKING;
+    firstBankAccount.salary = 10;
 
-    const mailSender: MailSender = new MailSender(fakeMail);
-    await mailSender.send({
-        to: "someone@mail.com",
-        from: "anotherone@mail.com",
-        subject: "Trap message",
-        body: "<h1>Sent from fake</h1>",
-    });
+    const secondBankAccount: BankAccount = new BankAccount();
+    secondBankAccount.type = BankAccountType.SAVING;
+    secondBankAccount.salary = 10;
 
-    mailSender.mailProvider = trapMail;
-    await mailSender.send({
-        to: "someone@mail.com",
-        from: "anotherone@mail.com",
-        subject: "Trap message",
-        body: "<h1>Sent from trap</h1>",
-    });
+    const thirdBankAccount: BankAccount = new BankAccount();
+    thirdBankAccount.type = BankAccountType.PAYROLL;
+    thirdBankAccount.salary = 10;
 
-    /*
-    Interface Strategy: É a interface responsável por definir o método que as classes 
-    concretas devem implementar.
-    Concrete Class: São as classes concretas, que implementarão a Interface Strategy.
-    Context Class: É a classe de contexto, que manipulará a Interface Strategy e a
-    executará.
-    Client: Usuário que manipula os objetos.
+    const monthlyFeeStrategy: IMonthlyFeeStrategy = getMonthlyFeeStrategy();
 
-    Interface Strategy: É a interface IMailSender.
-    Concrete Class: São as classes FakeMailSenderImpl e TrapSenderImpl.
-    Context Class: É a classe MailSender.
-    Client: Este arquivo.
+    for (const bankAccount of [firstBankAccount, secondBankAccount, thirdBankAccount]) {
+        const fee: number = monthlyFeeStrategy.calculate(bankAccount);
 
-    https://luby.com.br/desenvolvimento/software/design-pattern-strategy-com-typescript/
-    https://sbcode.net/typescript/strategy/#strategy-uml-diagram
-    */
+        console.log(`A mensalidade para esta conta do tipo ${bankAccount.type} é de R$${fee}`);
+    }
 }
 
-(async () => {
-    await main();
+function getMonthlyFeeStrategy(): IMonthlyFeeStrategy {
+    return new BankAccountMonthlyFeeStrategy(
+        new CheckingAccountFeeStrategy(),
+        new SavingAccountFeeStrategy(),
+        new PayrollAccountFeeStrategy(),
+    );
+}
+
+(() => {
+    main();
 })();
