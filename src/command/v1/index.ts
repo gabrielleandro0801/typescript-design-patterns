@@ -1,38 +1,27 @@
-import { CommandOne } from "./domain/command-one";
-import { CommandTwo } from "./domain/command-two";
-import { Invoker } from "./domain/invoker";
-import { Receptor } from "./domain/receptor";
+import { EmailNotificationCommand, SmsNotificationCommand } from "./infra/Commands";
+import { INotificationCommand } from "./infra/INotificationCommand";
+import { NotificationInvoker } from "./infra/NotificationInvoker";
+import { Notifier } from "./infra/Notifier";
 
-function main() {
-    const receiver = new Receptor();
+/**
+ * Essa é a função principal, que:
+ * 1. realiza a instanciação do receptor (Notifier).
+ * 2. realiza a instanciação dos comandos (implementações concretas da INotificationCommand).
+ * 3. realiza a instanciação do invoker (NotificationInvoker)
+ * 4. realiza a chamada ao método [run] do invoker, que irá invocar os comandos registrados.
+ */
+async function main() {
+    const notifier: Notifier = new Notifier();
 
-    const commandOne = new CommandOne(receiver);
-    const commandTwo = new CommandTwo(receiver);
+    const commands: INotificationCommand[] = [
+        new EmailNotificationCommand(notifier, ["abc@gmail.com", "Title of the email", "Body of the email"]),
+        new SmsNotificationCommand(notifier, ["0000000000000", "Content of the message"]),
+    ];
 
-    const invoker = new Invoker();
-    invoker.register("1", commandOne);
-    invoker.register("2", commandTwo);
-
-    invoker.execute("1");
-    invoker.execute("2");
-    invoker.execute("3");
-
-    /*
-    Receiver: A classe mediadora que executará o comando.
-    Command: A classe que implementa a interface Command, possuindo o método execute.
-    Invoker: A classe mediadora, que receberá os comandos via o método "register" e os executará
-    através do método "execute".
-    Client: O arquivo que terá conhecimento do Receiver, dos Commands e do Invoker.
-
-    Receiver: A classe Receptor.
-    Command: São os comandos 1 e 2.
-    Invoker: A classe Invoker.
-    Client: Este arquivo. 
-
-    https://medium.com/design-patterns-in-typescript/command-pattern-in-typescript-c3a2cfe588ea
-    */
+    const notificationInvoker: NotificationInvoker = new NotificationInvoker(commands);
+    await notificationInvoker.run();
 }
 
-(() => {
-    main();
+(async () => {
+    await main();
 })();
