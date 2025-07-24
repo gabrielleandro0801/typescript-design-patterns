@@ -11,6 +11,13 @@ It is the pattern used to instantiate complex objects in different ways.
 
 The instantiation of the complex object remain encapsulated inside the Builder.
 
+## Command
+It is the pattern that encapsulates a request as an object, allowing you to parameterize clients with operations, queue or log requests, and support undoable operations.
+
+It decouples the object that invokes the operation (the invoker) from the one that knows how to perform it (the receiver).
+
+The command object contains all the information needed to perform an action, including the method to call, the method’s arguments, and the receiver of the method.
+
 ## Result
 It is the pattern used to avoid throwing **exceptions** in the code.
 
