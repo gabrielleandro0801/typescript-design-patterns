@@ -18,6 +18,11 @@ It decouples the object that invokes the operation (the invoker) from the one th
 
 The command object contains all the information needed to perform an action, including the method to call, the method’s arguments, and the receiver of the method.
 
+## Factory
+The Factory Pattern defines an interface for creating objects, but allows subclasses or concrete factories to decide which class to instantiate.
+
+It encapsulates the object creation logic, making the system more flexible and decoupled. This pattern is especially useful when the client code should not depend on how specific objects are constructed.
+
 ## Result
 It is the pattern used to avoid throwing **exceptions** in the code.
 
