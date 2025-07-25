@@ -5,18 +5,7 @@
 	"main": "index.js",
 	"scripts": {
 		"lint:fix": "prettier --config .prettierrc 'src/**/*.ts' --write --check",
-		"execute": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify $1",
-		"adapter-v1": "npm run execute src/adapter/v1/index.ts",
-		"builder-v1": "npm run execute src/builder/v1/index.ts",
-		"command-v1": "npm run execute src/command/v1/index.ts",
-		"facade-v1": "npm run execute src/facade/v1/index.ts",
-		"factory-v1": "npm run execute src/factory/v1/index.ts",
-		"mediator-v1": "npm run execute src/mediator/v1/index.ts",
-		"result-v1": "npm run execute src/result/v1/index.ts",
-		"result-v2": "npm run execute src/result/v2/index.ts",
-		"singleton-v1": "npm run execute src/singleton/v1/index.ts",
-		"strategy-v1": "npm run execute src/strategy/v1/index.ts",
-		"specification-v1": "npm run execute src/specification/v1/index.ts"
+		"execute": "ts-node-dev --respawn --transpile-only --ignore-watch node_modules --no-notify $1"
 	},
 	"repository": {
 		"type": "git",
@@ -30,13 +19,12 @@
 	},
 	"homepage": "https://github.com/gabrielleandro0801/typescript-design-patterns#readme",
 	"dependencies": {
-		"ioredis": "^5.3.1"
+		"ioredis": "5.3.1"
 	},
 	"devDependencies": {
-		"@types/node": "^22.9.0",
-		"@types/nodemailer": "^6.4.8",
-		"prettier": "3.2.5",
-		"ts-node-dev": "^2.0.0",
+		"@types/node": "22.16.5",
+		"prettier": "3.6.2",
+		"ts-node-dev": "2.0.0",
 		"typescript": "5.8.3"
 	}
 }

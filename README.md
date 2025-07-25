@@ -41,9 +41,14 @@ It is the pattern used to encapsulate, reuse and combine business rules and vali
 The Specification classes own a method named **isSatistiedBy** which validates the given input.
 
 ## Running :computer:
-Run the **package.json** scripts.
+Use the **package.json** script
 
-For example,
 ``` shell
-npm run result-v1
+npm run execute $1
+```
+
+Providing the file index.ts of the desired pattern. For example,
+
+``` shell
+npm run execute src/adapter/v1/index.ts
 ```
