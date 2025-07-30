@@ -3,7 +3,7 @@ import { asyncLoggingDecorator, loggingDecorator } from "../logging/LoggingDecor
 export class PixService {
     @asyncLoggingDecorator()
     async sendAsync(amount: number) {
-        await waitSeconds(5);
+        await waitSeconds(5); // simula processamento assíncrono
 
         console.log(`Transferência de R$${amount} realizada de forma assíncrona`);
     }
