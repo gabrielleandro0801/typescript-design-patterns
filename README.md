@@ -18,6 +18,11 @@ It decouples the object that invokes the operation (the invoker) from the one th
 
 The command object contains all the information needed to perform an action, including the method to call, the method’s arguments, and the receiver of the method.
 
+## Decorator
+The Decorator Pattern is a structural design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
+
+It works by wrapping the original object in a decorator class that implements the same interface and can intercept, extend, or modify the original methods.
+
 ## Factory
 The Factory Pattern defines an interface for creating objects, but allows subclasses or concrete factories to decide which class to instantiate.
 
