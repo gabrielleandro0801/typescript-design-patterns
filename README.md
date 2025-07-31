@@ -28,6 +28,11 @@ The Factory Pattern defines an interface for creating objects, but allows subcla
 
 It encapsulates the object creation logic, making the system more flexible and decoupled. This pattern is especially useful when the client code should not depend on how specific objects are constructed.
 
+## Proxy
+The Proxy Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it.
+
+It allows you to intercept, defer, enhance, or restrict access to the original object, while maintaining the same interface.
+
 ## Result
 It is the pattern used to avoid throwing **exceptions** in the code.
 

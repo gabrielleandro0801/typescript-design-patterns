@@ -1,7 +1,7 @@
 import { Fetch } from "./infra/Fetch";
 import { HttpResponse, IHttpClient } from "./infra/IHttpClient";
 
-type BrasilApiGetCepResponse = {
+export type BrasilApiGetCepResponse = {
     cep: string;
     state: string;
     city: string;
