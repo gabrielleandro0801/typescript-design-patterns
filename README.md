@@ -1,6 +1,11 @@
 # Typescript Design Patterns
 Repository with examples of Design Patterns in Typescript
 
+## Abstract Factory
+It is a creational design pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes.
+
+It encapsulates the object creation process, allowing the client to create products that belong to the same family while keeping the specific implementation hidden.
+
 ## Adapter
 It is the pattern used to set contracts through interfaces.
 
@@ -49,6 +54,11 @@ Then, the clients will use this method to get the class instance.
 It is the pattern used to encapsulate, reuse and combine business rules and validations. It also reduces the usage of if/else throughout the code.
 
 The Specification classes own a method named **isSatistiedBy** which validates the given input.
+
+## Strategy
+It is a behavioral design pattern that defines a family of algorithms, encapsulates each one in a separate class, and makes them interchangeable at runtime.
+
+It allows the algorithm to vary independently from the clients that use it, promoting flexibility and reducing code duplication.
 
 ## Running :computer:
 Use the **package.json** script

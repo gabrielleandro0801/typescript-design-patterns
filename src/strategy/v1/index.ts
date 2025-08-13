@@ -1,11 +1,11 @@
-import { BankAccount, BankAccountType } from "../domain/BankAccount";
-import { IMonthlyFeeStrategy } from "../domain/IMonthlyFeeStrategy";
+import { BankAccount, BankAccountType } from "./domain/BankAccount";
+import { IMonthlyFeeStrategy } from "./domain/IMonthlyFeeStrategy";
 import {
     BankAccountMonthlyFeeStrategy,
     CheckingAccountFeeStrategy,
     PayrollAccountFeeStrategy,
     SavingAccountFeeStrategy,
-} from "../domain/MonthlyFeeStrategy";
+} from "./domain/MonthlyFeeStrategy";
 
 /**
  * Cada uma das instâncias de BankAccount possui um tipo diferente, acarretando em diferentes
