@@ -33,6 +33,11 @@ The Factory Pattern defines an interface for creating objects, but allows subcla
 
 It encapsulates the object creation logic, making the system more flexible and decoupled. This pattern is especially useful when the client code should not depend on how specific objects are constructed.
 
+## Prototype
+It is a creational design pattern that lets you create new objects by cloning existing ones, instead of instantiating them from scratch.
+
+It is useful when object creation is costly (e.g., involves expensive database queries or complex initialization) and you want to duplicate it efficiently.
+
 ## Proxy
 The Proxy Pattern is a structural design pattern that provides a surrogate or placeholder for another object to control access to it.
 
