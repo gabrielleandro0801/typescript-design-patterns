@@ -28,6 +28,12 @@ The Decorator Pattern is a structural design pattern that allows behavior to be 
 
 It works by wrapping the original object in a decorator class that implements the same interface and can intercept, extend, or modify the original methods.
 
+## Facade
+It is a structural pattern that provides a simplified, unified interface to a set of more complex subsystems.
+It hides the internal details and complexities of the system and offers clients a high-level, easy-to-use API.
+
+Instead of interacting with multiple classes directly, the client only communicates with the facade, which delegates requests to the appropriate subsystems.
+
 ## Factory
 The Factory Pattern defines an interface for creating objects, but allows subclasses or concrete factories to decide which class to instantiate.
 
