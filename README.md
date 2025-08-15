@@ -33,6 +33,12 @@ The Factory Pattern defines an interface for creating objects, but allows subcla
 
 It encapsulates the object creation logic, making the system more flexible and decoupled. This pattern is especially useful when the client code should not depend on how specific objects are constructed.
 
+## Mediator
+It is a behavioral design pattern that centralizes and orchestrates communication between different objects (called colleagues), preventing them from communicating directly with each other.
+
+Instead of each object knowing and calling methods on other objects, they interact only with the mediator.
+The mediator decides what to do and who to notify based on the messages it receives, reducing coupling and making interactions easier to manage and modify.
+
 ## Prototype
 It is a creational design pattern that lets you create new objects by cloning existing ones, instead of instantiating them from scratch.
 
