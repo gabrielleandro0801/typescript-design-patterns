@@ -11,6 +11,11 @@ It is the pattern used to set contracts through interfaces.
 
 So, implementations of these interfaces remain encapsulated preventing coupling between modules.
 
+## Bridge
+It is a structural design pattern that decouples an abstraction from its implementation, allowing them to vary independently.
+
+It separates the high-level logic (abstraction) from the platform-specific or detailed implementations, making the system more flexible and easier to extend.
+
 ## Builder
 It is the pattern used to instantiate complex objects in different ways.
 
