@@ -44,6 +44,11 @@ The Factory Pattern defines an interface for creating objects, but allows subcla
 
 It encapsulates the object creation logic, making the system more flexible and decoupled. This pattern is especially useful when the client code should not depend on how specific objects are constructed.
 
+## Flyweight
+It is a structural design pattern that minimizes memory usage by sharing as much data as possible between similar objects.
+
+It separates an object’s state into intrinsic (shared) and extrinsic (context-specific) parts, allowing large numbers of fine-grained objects to be represented efficiently.
+
 ## Mediator
 It is a behavioral design pattern that centralizes and orchestrates communication between different objects (called colleagues), preventing them from communicating directly with each other.
 
