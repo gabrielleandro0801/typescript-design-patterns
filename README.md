@@ -55,6 +55,11 @@ It is a behavioral design pattern that centralizes and orchestrates communicatio
 Instead of each object knowing and calling methods on other objects, they interact only with the mediator.
 The mediator decides what to do and who to notify based on the messages it receives, reducing coupling and making interactions easier to manage and modify.
 
+## Observer
+It is a behavioral design pattern that defines a one-to-many dependency between objects. When the state of one object (the Subject) changes, all of its Observers are automatically notified and updated.
+
+It promotes loose coupling between components — the subject doesn’t need to know who is observing it, only that it needs to broadcast events when something happens.
+
 ## Prototype
 It is a creational design pattern that lets you create new objects by cloning existing ones, instead of instantiating them from scratch.
 
