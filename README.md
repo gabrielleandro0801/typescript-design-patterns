@@ -21,6 +21,12 @@ It is the pattern used to instantiate complex objects in different ways.
 
 The instantiation of the complex object remain encapsulated inside the Builder.
 
+## Chain
+It is a behavioral design pattern that allows a request to be passed along a chain of handlers.
+
+Each handler decides either to process the request or to pass it to the next handler in the chain.
+It promotes loose coupling between senders and receivers of requests, enabling flexible and extensible request handling.
+
 ## Command
 It is the pattern that encapsulates a request as an object, allowing you to parameterize clients with operations, queue or log requests, and support undoable operations.
 
