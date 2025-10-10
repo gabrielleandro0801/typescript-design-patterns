@@ -4,9 +4,9 @@ import { EventType, ISubject } from "../observer/ISubject";
 
 /**
  * É a classe de domínio referente ao serviço de contas bancárias.
- * 
+ *
  * Ela possui os observadores registrados em cada tipo de evento.
- * 
+ *
  * Quando ocorre um evento (depósito ou saque) ela irá invocar os observadores
  * de acordo com o tipo de evento emitido.
  */

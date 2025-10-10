@@ -3,7 +3,7 @@ import { IObserver } from "../domain/observer/IObserver";
 
 /**
  * Esta é uma implementação concreta da interface IObserver (do observador).
- * 
+ *
  * Esta classe tem apenas o intuito de enviar emails para o portador quando
  * depósitos acontecerem.
  */
