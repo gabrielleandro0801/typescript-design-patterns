@@ -55,6 +55,11 @@ It is a structural design pattern that minimizes memory usage by sharing as much
 
 It separates an object’s state into intrinsic (shared) and extrinsic (context-specific) parts, allowing large numbers of fine-grained objects to be represented efficiently.
 
+## Iterator
+It is a behavioral design pattern that allows you to traverse elements of a collection (like arrays, lists, or maps) without exposing its internal structure.
+
+In short, it separates the logic of iteration (“what’s the next item?”) from the structure of the data (“how items are stored”).
+
 ## Mediator
 It is a behavioral design pattern that centralizes and orchestrates communication between different objects (called colleagues), preventing them from communicating directly with each other.
 
@@ -97,6 +102,11 @@ The Specification classes own a method named **isSatistiedBy** which validates t
 It is a behavioral design pattern that defines a family of algorithms, encapsulates each one in a separate class, and makes them interchangeable at runtime.
 
 It allows the algorithm to vary independently from the clients that use it, promoting flexibility and reducing code duplication.
+
+## Visitor
+It is a behavioral design pattern that lets you add new operations to existing object structures without modifying their classes.
+
+In essence, it separates an algorithm from the objects on which it operates.
 
 ## Running :computer:
 Use the **package.json** script
