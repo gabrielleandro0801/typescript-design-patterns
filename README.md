@@ -98,6 +98,13 @@ It is the pattern used to encapsulate, reuse and combine business rules and vali
 
 The Specification classes own a method named **isSatistiedBy** which validates the given input.
 
+## State
+It is a behavioral design pattern that allows an object to change its behavior dynamically when its internal state changes, as if it were changing its class at runtime.
+
+It creates a separate class for each possible state of the object; moves the state-specific behavior into these classes; lets the context (main object) delegate behavior to the current state object instead of using conditionals.
+
+Each state class can decide what the next valid state is, encapsulating all the transition logic.
+
 ## Strategy
 It is a behavioral design pattern that defines a family of algorithms, encapsulates each one in a separate class, and makes them interchangeable at runtime.
 
