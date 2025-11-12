@@ -34,6 +34,11 @@ It decouples the object that invokes the operation (the invoker) from the one th
 
 The command object contains all the information needed to perform an action, including the method to call, the method’s arguments, and the receiver of the method.
 
+## Composite
+It is a structural design pattern that allows you to treat individual objects and compositions of objects uniformly.
+
+It organizes objects into tree structures to represent part-whole hierarchies, so that clients can interact with both single objects and groups of objects using the same interface.
+
 ## Decorator
 The Decorator Pattern is a structural design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
 
@@ -109,6 +114,11 @@ Each state class can decide what the next valid state is, encapsulating all the 
 It is a behavioral design pattern that defines a family of algorithms, encapsulates each one in a separate class, and makes them interchangeable at runtime.
 
 It allows the algorithm to vary independently from the clients that use it, promoting flexibility and reducing code duplication.
+
+## Template
+It is a behavioral design pattern that defines the skeleton of an algorithm in a base class, allowing subclasses to override specific steps without changing the algorithm’s overall structure.
+
+It is useful when multiple classes need to follow the same workflow but differ in some of the processing steps.
 
 ## Visitor
 It is a behavioral design pattern that lets you add new operations to existing object structures without modifying their classes.
