@@ -34,6 +34,11 @@ It decouples the object that invokes the operation (the invoker) from the one th
 
 The command object contains all the information needed to perform an action, including the method to call, the method’s arguments, and the receiver of the method.
 
+## Composite
+It is a structural design pattern that allows you to treat individual objects and compositions of objects uniformly.
+
+It organizes objects into tree structures to represent part-whole hierarchies, so that clients can interact with both single objects and groups of objects using the same interface.
+
 ## Decorator
 The Decorator Pattern is a structural design pattern that allows behavior to be added to an individual object, dynamically, without affecting the behavior of other objects from the same class.
 
