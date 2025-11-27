@@ -71,6 +71,17 @@ It is a behavioral design pattern that centralizes and orchestrates communicatio
 Instead of each object knowing and calling methods on other objects, they interact only with the mediator.
 The mediator decides what to do and who to notify based on the messages it receives, reducing coupling and making interactions easier to manage and modify.
 
+## Memento
+The Memento is a behavioral design pattern that allows an object to save and restore its previous internal state without exposing its internal structure or implementation details.
+
+It helps maintain encapsulation, as the internal state is stored and restored safely without exposing private data or breaking the Originator’s integrity.
+
+It has three main participants:
+
+- Originator — the object whose state needs to be saved or restored.
+- Memento — an immutable snapshot containing the Originator’s internal state at a specific moment in time.
+- Caretaker — manages the history of mementos but cannot inspect or modify their contents.
+
 ## Observer
 It is a behavioral design pattern that defines a one-to-many dependency between objects. When the state of one object (the Subject) changes, all of its Observers are automatically notified and updated.
 
